@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+    
+        "Dockerfile*": "dockerfile",
+        "iris.script": "objectscript"
+      },
+    "objectscript.conn" :{
+        "ns": "IRISMEGAZORD",
+        "username": "_SYSTEM",
+        "password": "SYS",
+        "docker-compose": {
+            "service": "iris",
+            "internalPort": 52773
+        },
+        "links": {
+            "Portal": "http://localhost:${port}/csp/sys/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS",
+            "Megazord Portal": "http://localhost:${port}/csp/irismegazord/index.csp",
+            "ZPM Explorer": "http://localhost:${port}/csp/irisapp/explorer.html"
+        },
+        "active": true,
+        "server": "default~iris"
+    }
+}
